@@ -1,0 +1,16 @@
+FROM ubuntu:20.04
+VOLUME ["/test_output"]
+
+RUN apt-get update && apt-get -y upgrade && apt install -y git make gcc zlib1g-dev
+RUN git clone -b fio-3.29 https://github.com/axboe/fio.git
+RUN apt install -y fio openssh-client sshpass
+
+WORKDIR ./fio
+RUN ./configure && make && make install
+
+WORKDIR ../
+COPY ./fio_start.sh ./
+COPY ./randread.fio ./
+COPY ./randwrite.fio ./
+
+CMD bash ./fio_start.sh
