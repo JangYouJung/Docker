@@ -1,5 +1,6 @@
-# 2022 성신여대 학부생 연구 참여 프로젝트 UROP 연구 산출물👩‍💻
-* QEMU 가상머신과 도커의 입출력 비교 실험용 Dockerfile과 스크립트 파일
+# 🖥️ Docker vs QEMU : FIO Benchmark Test Script
+* 2022 성신여대 학부생 연구 참여 프로젝트 UROP 연구 산출물👩‍💻
+* QEMU 가상머신과 도커의 입출력 비교 실험용 Dockerfile과 스크립트 파일📜
 
 <br></br>
 
